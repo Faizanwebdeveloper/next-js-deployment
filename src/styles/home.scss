@@ -1,0 +1,206 @@
+@use '../styles/variabls' as *;
+
+/* Banner */
+.carousel {
+  .carousel-item {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-caption {
+      right: 0 !important;
+      text-align: left !important;
+      bottom: inherit !important;
+      top: 20%;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      h5 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .carousel-control-next {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Core */
+.core {
+  padding: $section-gap 2rem;
+
+  .container {
+    .row {
+      .col-md-4 {
+        .feature-box {
+          display: flex;
+          gap: 1.5rem;
+
+          .f-point {
+            h1 {
+              font-size: 100px;
+              font-family: 'Poppins', sans-serif;
+              color: rgba(100, 117, 137, 0.102);
+              font-weight: 700;
+              line-height: 0.78;
+            }
+          }
+
+          .feature {
+            .f-icon {
+              svg {
+                font-size: calc($heading-font + 2rem);
+                margin-bottom: 1.5rem;
+                color: $primary-color;
+              }
+            }
+
+            .f-description {
+              h1 {
+                font-size: $heading-font;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
+              }
+
+              p {
+                font-size: $para-font;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.product {
+  padding: $section-gap 2rem;
+
+  .container {
+    .row {
+      .product_content {
+        position: sticky;
+        height: 100%;
+        top: 2rem;
+
+        span {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        h5 {
+          font-size: $heading-font;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          font-size: $para-font;
+        }
+      }
+
+      .col-md-6 {
+        .product_image {
+          margin-bottom: 2rem;
+
+          .card_child {
+            display: flex;
+            gap: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 2rem;
+            border-radius: 2rem;
+
+            .product_image_wrapper {
+              img {
+                border-radius: 1rem;
+              }
+            }
+
+            .product_content_wrapper {
+              h5 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              }
+
+              p {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home_carousel {
+  .swiper-wrapper {
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+      .carousel-caption {
+        right: 0 !important;
+        text-align: left !important;
+        bottom: inherit !important;
+        top: 20%;
+        left: 8% !important;
+
+        h1 {
+          font-size: $heading-font - 0.2rem;
+          font-weight: 500;
+        }
+
+        h5 {
+          
+          margin-top: 2rem;
+          font-size: $subheading-font - 0.3rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      font-size: $para-font;
+      color: #fff;
+    }
+  }
+}
+
+
