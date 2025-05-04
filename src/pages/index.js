@@ -4,12 +4,14 @@ import Footer from "@/componets/Footer";
 import Header from "@/componets/Header";
 import ComapnyCore from "@/componets/ComapnyCore";
 import ProductHome from "@/componets/ProductHome";
+import CarouselHome from "@/componets/CarouselHome";
+
 
 // ✅ Only one dynamic import
-const CarouselHome = dynamic(() => import('@/componets/CarouselHome'), {
-  ssr: false,
-  loading: () => <div>Loading...</div>,
-});
+// const CarouselHome = dynamic(() => import('@/componets/CarouselHome'), {
+//   ssr: false,
+//   loading: () => <div>Loading...</div>,
+// });
 
 export default function Home() {
   return (
